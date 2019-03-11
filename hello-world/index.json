@@ -9,11 +9,17 @@
       "text": "step1.md"
     }],
     "intro": {
+	  "code": "foreground.sh",
       "text": "intro.md",
       "credits": ""
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+         {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+      ]
     }
   },
   "environment": {
