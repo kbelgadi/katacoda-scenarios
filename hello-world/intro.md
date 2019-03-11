@@ -1,1 +1,1 @@
-Welcome to your first Katacoda Scenario!
+Katacoda k8s for dummies!
