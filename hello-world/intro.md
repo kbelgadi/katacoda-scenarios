@@ -1,1 +1,1 @@
-Welcome to your first Katacoda Scenario!
+Welcome Katacoda for dummies!
