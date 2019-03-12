@@ -29,9 +29,17 @@ List existing deployments in your namespace:
 
 `kubectl -n k8s-demo get deployments`{{execute}}
 
+Notice that the Deployment resource is labeled with the same label as the service (to make the service/pod wiring possible).
+
 List existing pods in your namespace:
 
 `kubectl -n k8s-demo get pods`{{execute}}
 
 The pod is still in the state `creating`.
 Execute the above command until the deployment is ready.
+
+Display the IP address of the backend pod:
+
+`kubectl -n k8s-demo describe service demo-app-svc | grep -i endpoints`{{execute}}
+
+The service endpoints are binded to the Pod IP.

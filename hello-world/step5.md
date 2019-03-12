@@ -16,4 +16,4 @@ DEMO_APP_PORT=$(kubectl -n k8s-demo get svc -l app=demo-app -o json | jq -r '.it
 
 Then, request the application as following:
 
-`curl -s ${DEMO_APP_IP}:${DEMO_APP_PORT}/v1/demo/1234/info`{{execute}}
+`curl -s ${DEMO_APP_IP}:${DEMO_APP_PORT}/v1/demo/1234/info | jq`{{execute}}
