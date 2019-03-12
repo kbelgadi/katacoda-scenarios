@@ -6,7 +6,8 @@ This will allow us to organize our deployments on the cluster.
 
 Deploy the following YAML K8s manifest:
 
-```cat <<EOF | kubectl apply -f -
+```
+cat <<EOF | kubectl apply -f -
 kind: Namespace
 apiVersion: v1
 metadata:

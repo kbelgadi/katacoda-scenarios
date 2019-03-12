@@ -4,7 +4,8 @@ We will now deploy our application.
 
 Deploy the following YAML K8s manifest to create a k8s Deployment resource:
 
-```cat <<EOF | kubectl apply -f -
+```
+cat <<EOF | kubectl apply -f -
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
@@ -21,7 +22,8 @@ spec:
       - name: demo-app
         image: hwdzinn/demospringboot:0.1
         imagePullPolicy: Always
-EOF```{{execute}}
+EOF
+```{{execute}}
 
 List existing deployments in your namespace:
 

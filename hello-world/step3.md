@@ -4,8 +4,8 @@ We will now create a service to access to the application.
 
 Deploy the following YAML K8s manifest to create a service:
 
-
-```cat <<EOF | kubectl apply -f -
+```
+cat <<EOF | kubectl apply -f -
 kind: Service
 apiVersion: v1
 metadata:
@@ -21,7 +21,8 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-EOF```{{execute}}
+EOF
+```{{execute}}
 
 List existing services:
 
