@@ -1,11 +1,13 @@
 This is your first step.
 
-##Â Task
+A cluster install is in progress, please wait until it ends and all nodes become ready.
+
+## Task
 
 This is how you can list K8s nodes:
 
 `kubectl get nodes`{{execute}}
 
-Then you can list running pods:
+You can also list running pods:
 
 `kubectl get pods --all-namespaces`{{execute}}
