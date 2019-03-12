@@ -2,7 +2,7 @@ This is your first step.
 
 A cluster install is in progress, please wait until it ends and all nodes become ready.
 
-## Task
+##Task
 
 This is how you can list K8s nodes:
 

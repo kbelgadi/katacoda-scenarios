@@ -27,7 +27,8 @@ show_progress()
   echo -n "Nodes initialising"
   while true; do 
     #sudo grep -i "done" /root/katacoda-background-finished &> /dev/null
-    JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}'  && NB_NODES=$(kubectl get nodes -o jsonpath="$JSONPATH" | grep "Ready=True")
+    JSONPATH='{range .items[*]}{@.metadata.name}:{range @.status.conditions[*]}{@.type}={@.status};{end}{end}'
+    NB_NODES=$(kubectl get nodes -o jsonpath="$JSONPATH" | grep "Ready=True")
     if [ $NB_NODES -lt 1 ]; then
       temp="${spinstr#?}"
       printf " [%c]  " "${spinstr}"
