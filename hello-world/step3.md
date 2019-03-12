@@ -29,3 +29,7 @@ List existing services:
 `kubectl -n k8s-demo get services`{{execute}}
 
 Notice that the service has been provided with a virtual IP (ClusterIP).
+
+Display the IP address of the backend pod:
+
+`kubectl -n k8s-demo describe service demo-app-svc | grep -i endpoints`{{execute}}

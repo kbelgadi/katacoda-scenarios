@@ -1,19 +1,19 @@
-Let's create a namespace first.
-This should let us organize our deployments over the cluster.
+We can now request our application.
 
 ## Task
 
-Deploy the following YAML K8s manifest:
+Get the IP and Port of the K8s service:
+
+To get the IP, execute the following command:
 
 `
-cat <<EOF | kubectl apply -f -
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: k8s-demo
-EOF
-`{{execute}}
+DEMO_APP_IP=$(kubectl -n k8s-demo get svc -l app=demo-app -o json | jq -r '.items[0].spec.clusterIP')`{{execute}}
 
-List existing namespaces:
+To get the Port, execute the following command:
 
-`kubectl get namespaces`{{execute}}
+`
+DEMO_APP_PORT=$(kubectl -n k8s-demo get svc -l app=demo-app -o json | jq -r '.items[0].spec.ports[0].port')`{{execute}}
+
+Then, request the application as following:
+
+`curl -s ${DEMO_APP_IP}:${DEMO_APP_PORT}/v1/demo/1234/info`{{execute}}
