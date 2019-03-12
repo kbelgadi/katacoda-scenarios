@@ -1,19 +1,29 @@
-Let's create a namespace first.
-This should let us organize our deployments over the cluster.
+We will now create a service to access to the application.
 
 ## Task
 
-Deploy the following YAML K8s manifest:
+Deploy the following YAML K8s manifest to create a service:
 
 `
-cat <<EOF | kubectl apply -f -
-kind: Namespace
+kind: Service
 apiVersion: v1
 metadata:
-  name: k8s-demo
-EOF
+  name: demo-app-svc
+  namespace: k8s-demo
+  labels:
+    app: demo-app
+spec:
+  type: ClusterIP
+  selector:
+    app: demo-app
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
 `{{execute}}
 
-List existing namespaces:
+List existing services:
 
-`kubectl get namespaces`{{execute}}
+`kubectl -n k8s-demo get services`{{execute}}
+
+Notice that the service has been provided with a virtual IP (ClusterIP).

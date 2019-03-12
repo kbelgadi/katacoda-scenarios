@@ -1,19 +1,35 @@
-Let's create a namespace first.
-This should let us organize our deployments over the cluster.
+We will now deploy our application.
 
 ## Task
 
-Deploy the following YAML K8s manifest:
+Deploy the following YAML K8s manifest to create a k8s Deployment resource:
 
 `
-cat <<EOF | kubectl apply -f -
-kind: Namespace
-apiVersion: v1
+apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
-  name: k8s-demo
-EOF
+  name: demo-app
+  namespace: k8s-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - name: demo-app
+        image: hwdzinn/demospringboot:0.1
+        imagePullPolicy: Always
 `{{execute}}
 
-List existing namespaces:
+List existing deployments in your namespace:
 
-`kubectl get namespaces`{{execute}}
+`kubectl -n k8s-demo get deployments`{{execute}}
+
+List existing pods in your namespace:
+
+`kubectl -n k8s-demo get pods`{{execute}}
+
+The pod is still in the state `creating`.
+Execute the above command until the deployment is ready.

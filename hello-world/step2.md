@@ -1,5 +1,6 @@
 Let's create a namespace first.
-This should let us organize our deployments over the cluster.
+
+This will allow us to organize our deployments on the cluster.
 
 ## Task
 
@@ -17,3 +18,5 @@ EOF
 List existing namespaces:
 
 `kubectl get namespaces`{{execute}}
+
+Notice the new namespace in the displayed list.
