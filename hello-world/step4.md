@@ -2,7 +2,7 @@ We will now deploy our application.
 
 ## Task
 
-Deploy the following YAML K8s manifest to create a k8s Deployment resource:
+Deploy the following YAML K8s manifest to create a k8s Deployment resource: 
 
 ```
 cat <<EOF | kubectl apply -f -

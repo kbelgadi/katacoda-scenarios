@@ -34,4 +34,4 @@ Display the IP address of the backend pod:
 
 `kubectl -n k8s-demo describe service demo-app-svc | grep -i endpoints`{{execute}}
 
-Nothing displayed, since there is not yet any pod to bind to.
+Nothing displayed, since there is not yet any pod to bind to. 
