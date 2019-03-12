@@ -1,8 +1,10 @@
-This is your first step.
-
-A cluster install is in progress, please wait until it ends and all nodes become ready.
+A cluster install is in progress.
+Please wait until it ends.
+Then, all nodes should become ready.
 
 ## Task
+
+Now that then cluster is ready, we can begin exploring it.
 
 This is how you can list K8s nodes:
 

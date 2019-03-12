@@ -1,13 +1,31 @@
 {
-  "title": "K8s Scenario",
-  "description": "K8s for dummies",
+  "title": "K8s series",
+  "description": "1- K8s for dummies",
   "difficulty": "beginner",
-  "time": "2 minutes",
+  "time": "5 minutes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Get nodes",
-      "text": "step1.md"
-    }],
+    "steps": [
+       {
+         "title": "Step 1 - Install and check nodes",
+         "text": "step1.md"
+       },
+       {
+         "title": "Step 2 - Create a namespace",
+         "text": "step2.md"
+       },
+       {
+         "title": "Step 3 - Create a service",
+         "text": "step2.md"
+       },
+       {
+         "title": "Step 4 - Create a deployment",
+         "text": "step3.md"
+       },
+       {
+         "title": "Step 5 - Check your app",
+         "text": "step4.md"
+       }
+    ],
     "intro": {
 	  "code": "foreground.sh",
       "text": "intro.md",

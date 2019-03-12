@@ -1,1 +1,1 @@
-Katacoda k8s for dummies!
+K8s for dummies!

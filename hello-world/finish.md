@@ -1,1 +1,1 @@
-You've completed your first Katacoda scenario!
+Congratulations! You've completed your first K8s overview!
